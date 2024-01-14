@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #Box{
+            border:1px solid black;
+            width:600px;
+            height:600px;
+            position:relative;
+            top:100px;
+            left:30%;
+            border-radius: 80px;
+        }
+            #Box input[type="text"] {
+                width:235px;
+                height:50px;
+                margin-top:10px;
+                margin-left:10px;
+                margin-right:10px;
+                text-align:center;
+            }
+        #Box1{
+            font-size:14px;
+            /*margin-top:50px;*/
+            margin-right:10px;
+            margin-left:38px;
+        }
+        #Div1 {
+            font-size: 11px;
+            font-size: 14px;
+            margin-right: 10px;
+            margin-left: 52px;
+        }
+        #Value {
+            border: 1px none black;
+            margin-top:10px;
+            margin-right: 10px;
+            margin-left: 52px;
+        }
+        #Value {
+            font-size: 20px;
+            position: relative;
+            text-align: center;
+            margin-right: 10px;
+            margin-left: 52px;
+        }
+        h1{
+            margin-top:20px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Box">
+        <div id="Box1">
+            <h1> Sign Up </h1>
+            <div id="Title">
+                <p>  It’s quick and easy</p>
+            </div>
+            <hr />
+            <input type="text" placeholder="First Name" style="border-radius:10px" />
+            <input type="text" placeholder="Last Name" style="border-radius: 10px" />
+            <br />
+            <input type="text" placeholder="Mobile number or email address" style="width: 500px; height: 50px; border-radius: 10px; margin-top:15px" />
+            <br />
+        </div>
+        <div id="Password">
+            <input type="password" placeholder="Enter Password" style="width: 500px; height: 50px; border-radius: 10px;margin-right:10px; margin-left:48px; text-align: center; margin-top:15px" />
+        </div>
+        <div id="Value">
+            <table>
+                <tr>
+                    <td>Date of Birth </td>
+                    <td> <input type="date" value="Date of Birth" style="width: 200px; height: 50px; border-radius: 10px;font-size:large" /></td>
+                </tr>
+                <tr>
+                    <td> Gender </td>
+                    <td><input type="radio" name="Gender" /> Male <input type="radio" name="Gender" />Female</td>
+
+                </tr>
+            </table>
+        </div>
+
+        <div id="Div1">
+            <p>By clicking Sign Up, you agree to our <a href="http://www.google.com">Terms</a>, <a href="http://www.google.com">Privacy Policy</a>, and <a href="http://www.google.com">Cookies Policy</a>.</p>
+            <p>You may receive SMS notifications from us and can opt out at any time.</p>
+        </div>
+
+        <input type="button" value="Sign up" style="width: 210px; height: 50px; background-color: lightgreen;
+        color: white; border-radius: 10px; font-family: Calibri (Body); font-size: 28px; margin-right: 20px;
+        margin-left: 70px; margin-bottom:10px" />
+        <input type="button" value="Clear" style="width: 210px; height: 50px; background-color: orange;
+         color: white; border-radius: 10px; font-family: Calibri (Body); font-size: 28px; margin-right:40px;
+         margin-left: 25px;margin-top:10px" />
+
+    </div>
+</body>
+</html>

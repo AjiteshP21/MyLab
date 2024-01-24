@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Portfolio </title>
+    <script src="https://kit.fontawesome.com/26d0867eb9.js" crossorigin="anonymous"></script>
+    <style>
+        html{
+            scroll-behavior:smooth;
+        }
+        body {
+            box-sizing: border-box;
+            background-color: black;
+            color: white;
+            margin-left: 50px;
+            margin-right: 50px;
+            padding: 0px;
+            font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+        }
+        #Header {
+            width: 100%;
+            height: 100%;
+            background-image: url('images/presentation2.1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .Container {
+            /*margin:0 auto;*/
+            padding: 0 10px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 30px 30px;
+        }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                position: relative;
+            }
+
+                nav ul li a::after {
+                    content: '';
+                    width: 0;
+                    height: 3px;
+                    background: #ff004f;
+                    position: absolute;
+                    left: 0;
+                    bottom: -6px;
+                    transition: 0.5s;
+                }
+
+                nav ul li a:hover::after {
+                    width: 100%;
+                }
+
+        .header-text {
+            margin-top: 20%;
+            font-size: 30px;
+        }
+
+            .header-text h1 {
+                font-size: 60px;
+                margin-top: 20px;
+            }
+
+                .header-text h1 span {
+                    color: cornflowerblue;
+                }
+
+        #about {
+            padding: 80px 0;
+            Color: white;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .about-col-1 {
+            flex-basis: 35%;
+        }
+
+            .about-col-1 img {
+                width: 100%;
+                border-radius: 15px;
+                margin:0 auto;
+            }
+
+        .about-col-2 {
+            flex-basis: 60%;
+        }
+
+        .sub-title {
+            font-size: 60px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .tab-title {
+            display: flex;
+            margin: 20px 0 40px;
+        }
+
+        .tab-links {
+            margin-right: 25px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+
+            .tab-links::after {
+                content: '';
+                width: 0;
+                height: 3px;
+                background: #ff004f;
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                transition: 0.5s;
+            }
+
+            .tab-links.active-link::after {
+                width: 50px;
+            }
+
+        .tab-contents ul li {
+            list-style: none;
+            margin: 10px 0;
+        }
+            .tab-contents ul li span {
+                color: aqua;
+                font-size: 20px;
+            }
+        .tab-contents {
+            display: none;
+        }
+            .tab-contents.active-tab {
+                display: block;
+            }
+        #projects {
+            padding: 30px 0;
+        }
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+        }
+            .project-list div {
+                background: #262626;
+                padding: 40px;
+                font-size: 13px;
+                font-weight: 300;
+                border-radius: 10px;
+                transition: background 0.5s,transform 0.5s;
+            }
+                .project-list div i {
+                    font-size: 50px;
+                    margin-bottom: 30px;
+                }
+                .project-list div h2 {
+                    font-size: 30px;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                }
+                .project-list div a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 12px;
+                    margin-top: 20px;
+                    display: inline-block;
+                }
+                .project-list div:hover {
+                    background: #ff004f;
+                    transform: translateY(-10px);
+                }
+        .contact-left{
+            flex-basis: 35%;
+        }
+        .contact-right{
+            flex-basis: 60%;
+        }
+            .contact-left p i{
+                margin-top: 15px;
+                color: chocolate;
+                margin-right: 15px;
+                font-size: 25px;
+            }
+        .sub-title i {
+            color: blue;
+            margin-right: 15px;
+            font-size: 25px;
+        }
+        .sub-title {
+            font-size: 60px;
+            font-weight: 600;
+            color: white;
+        }
+        .social-icon{
+            margin-top:30px;
+        }
+            .social-icon a {
+                text-decoration: none;
+                font-size: 30px;
+                margin-right: 15px;
+                color:#808080;
+                display: inline-block;
+                transition: transform 0.5s;
+            }
+        .social-icon a:hover{
+            color:#ff004f;
+            transform:translateY(-5px);
+        }
+        .button-btn {
+            background: #FF4742;
+            border: 1px solid #FF4742;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 16px;
+            min-height: 40px;
+            margin-top:20px;
+            padding: 14px 16px;
+            text-align: center;
+            text-rendering: geometricprecision;
+            touch-action: manipulation;
+            vertical-align: middle;
+        }
+            .button-btn:hover,
+            .button-btn:active {
+                background-color: initial;
+                background-position: 0 0;
+                color: #FF4742;
+            }
+            .button-btn:active {
+                opacity: .5;
+            }
+       .button-btn.btn2{
+            display:inline-block;
+            color:white;
+           text-decoration:none;
+        }
+       .contact-right form{
+           width:80%;
+           margin:10px;
+       }
+       form input, form textarea{
+           width:100%;
+           border:0;
+           outline:none;
+           display:inline-block;
+           background:#262626;
+           padding: 15px;
+           margin-top:15px;
+           color:#fff;
+           font-size:18px;
+           border-radius:10px;
+       }
+        .contact div h1 {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        .copyright {
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background: black;
+            font-weight: 300;
+            margin-top: 40px;
+        }
+        .copyright i{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="Header">
+        <div class="Container">
+            <nav>
+                <img src="Images/Ajitesh-Pawar (1)-PhotoRoom.png-PhotoRoom.png" class="logo" />
+                <ul>
+                    <li><a href="#Header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Mechanical Engineering with IT Specialization</p>
+                <h1>Hi, I'm <span>Ajitesh Pawar</span><br /> From India</h1>
+            </div>
+        </div>
+    </div>
+    <!--------------about-------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/user.png" />
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About Me </h1>
+                    <p>
+                        To actively pursue and secure a full-time position that not only presents professional
+                        challenges but also allows me to utilize and enhance my exceptional interpersonal skills,
+                        effective time management, and strong problem-solving abilities. I am eager to contribute
+                        my diverse skill set to a dynamic work environment and thrive in an atmosphere that values
+                        innovation and continuous learning.
+                    </p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        <!--<p class="tab-links" onclick="opentab('')"></p>-->
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>MySQL</span><br />Database Developer</li>
+                            <li><span>HTML CSS & JavaScript</span><br />Web Developer</li>
+                            <li><span>C#</span><br />C# Developer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2023 - Current</span><br />Software Development Course(Full-Stack Development)</li>
+                            <li><span>2023</span><br />Bachelor of Engineering (BE in Mechanical Engineering)</li>
+                            <li><span>2020</span><br />Diploma in Mechanical Engineering</li>
+                        </ul>
+                    </div>
+                    <!--<div class="tab-contents" id="Projects">
+                        <ul>
+                            <li><span>Pharma Data Assessment - SQL Project</span><br />Proficiently utilized SQL functions in the project, including SELECT for data retrieval, COUNT for record counting, SUM for total value calculation, DISTINCT for unique values, AVG for averaging, ORDER BY for sorting, and GROUP BY for result-set grouping.</li>
+                            <li><span></span><br /> </li>
+                            <li><span>Log In Page for VHaaSh Technologies Private Limited – HTML & CSS Project</span><br /></li>
+                        </ul>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <!--<i class="fa-solid fa-code"></i>-->
+                    <h2>Pharma Data Assessment - SQL Project</h2>
+                    <p>
+                        Proficiently utilized SQL functions in the project, including SELECT for data
+                        retrieval, COUNT for record counting, SUM for total value calculation, DISTINCT for
+                        unique values, AVG for averaging, ORDER BY for sorting, and GROUP BY for result-set
+                        grouping.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>Log In Page for VHaaSh Technologies Private Limited – HTML & CSS Project</h2>
+                    <p>
+                        Developed a Login Page for VHaaSh Technologies Private Limited by employing a
+                        variety of HTML and CSS functions. Utilized HTML for structuring the page, creating
+                        form elements, and managing the overall layout. Employed CSS to enhance the visual
+                        appeal by styling elements, ensuring a seamless and aesthetically pleasing user
+                        interface. Implemented responsive design techniques to optimize the login page for
+                        different devices.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-file-excel"></i>
+                    <h2>Paytm Mall EPurchase Data Analysis Assessment – Excel Project</h2>
+                    <p>
+                        Utilizing advanced Excel functions including Pivot Tables, Bar Charts, Pie Charts,
+                        Scatter Plot Graphs, VLOOKUP, and Conditional Formatting. Analyzed extensive datasets,
+                        identified sales trends, and correlated variables for strategic insights. Merged
+                        external data sources, ensuring completeness, and presented actionable insights to
+                        stakeholders.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>ajiteshpawar@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+91 8369143133</p>
+                    <div class="social-icon">
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ajitesh-pawar-76908a1b5/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Images/Ajitesh Pawar Resume 1.pdf" download class="button-btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required />
+                        <input type="email" name="Email" placeholder="Your Email" required />
+                        <textarea name="Message" rows="6" placeholder="Your Messsage"></textarea>
+                        <button class="button-btn" role="button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Ajitesh. | All Rights Reserved. |<i class="fa-solid fa-heart"></i> Designed by Ajitesh Pawar</p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
+
